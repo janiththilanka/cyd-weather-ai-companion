@@ -2,6 +2,15 @@
 
 An intelligent, dual-display IoT desk companion powered by the **ESP32-2432S028R** ("Cheap Yellow Display" / CYD) and a secondary **0.96" SSD1306 OLED**. Features an expressive animated AI agent with Lissajous gaze tracking, audio-simulated mouth equalizer, autonomous 6-stage weather story narrator, 4-day synoptic atmospheric telemetry, and a persistent hardware neural accelerator HUD.
 
+<p align="center">
+  <img src="posters/assets/oled_cyd_dualscreen_sharp.jpg" width="75%" alt="Dual Screen CYD and OLED Hardware Setup" />
+</p>
+
+<p align="center">
+  <img src="posters/assets/oled_task_manager_closeup.jpg" width="48%" alt="Secondary OLED Neural Accelerator HUD" />
+  <img src="posters/assets/screen_companion_uv_advisory_eyes.jpg" width="48%" alt="Primary CYD AI Companion Screen" />
+</p>
+
 ---
 
 ## Key Highlights
