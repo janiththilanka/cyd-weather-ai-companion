@@ -1,0 +1,30 @@
+# Posters & Image Assets (Exclude all poster renders and image assets)
+posters/assets/
+posters/output/
+poster_assets/
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+# Arduino / ESP32 Build Outputs
+build/
+*.bin
+*.elf
+*.hex
+*.map
+
+# Arduino IDE Cache
+*.app.zip
+*.sketch
+.arduino/
+
+# Editor & OS Metadata
+.vscode/
+.idea/
+*.swp
+*.bak
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
