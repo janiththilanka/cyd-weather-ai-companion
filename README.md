@@ -3,12 +3,11 @@
 An intelligent, dual-display IoT desk companion powered by the **ESP32-2432S028R** ("Cheap Yellow Display" / CYD) and a secondary **0.96" SSD1306 OLED**. Features an expressive animated AI agent with Lissajous gaze tracking, audio-simulated mouth equalizer, autonomous 6-stage weather story narrator, 4-day synoptic atmospheric telemetry, and a persistent hardware neural accelerator HUD.
 
 <p align="center">
-  <img src="posters/assets/oled_cyd_dualscreen_sharp.jpg" width="75%" alt="Dual Screen CYD and OLED Hardware Setup" />
+  <img src="posters/assets/desk_setup_wide_forecast.jpg" width="85%" alt="Dual Screen CYD and OLED Hardware Setup" />
 </p>
 
 <p align="center">
-  <img src="posters/assets/oled_task_manager_closeup.jpg" width="48%" alt="Secondary OLED Neural Accelerator HUD" />
-  <img src="posters/assets/screen_companion_uv_advisory_eyes.jpg" width="48%" alt="Primary CYD AI Companion Screen" />
+  <img src="posters/assets/oled_cyd_dualscreen_sharp.jpg" width="85%" alt="Dual-Display Synchronized Telemetry" />
 </p>
 
 ---
@@ -27,6 +26,71 @@ An intelligent, dual-display IoT desk companion powered by the **ESP32-2432S028R
   - Automatically walks through Today's Weather, Comfort Index, UV / Action Advisory, 4-Day Forecast, and Weekly Outlook, concluding with an explicit `"— END —"`.
 - **Zero-Disturbance Bedtime Mode:**
   - Automatically transitions between 22:00 and 06:30 into a warm amber night clock dimmed to 35/255 brightness.
+
+---
+
+## 📸 Visual Hardware & Interface Tour
+
+### 1. Secondary Display: AI Hardware & Accelerator HUD (0.96" OLED, 128×64)
+
+<p align="center">
+  <img src="posters/assets/oled_task_manager_closeup.jpg" width="65%" alt="OLED Task Manager and Hardware HUD" />
+</p>
+
+The secondary OLED display operates as a dedicated hardware performance task manager and neural telemetry HUD on an independent I²C bus (`0x3C`, 400 kHz):
+- **CPU Sparkline History:** 32-sample scrolling historical graph tracking ESP32 dual-core processing load.
+- **Dynamic RAM Allocation Gauge:** Real-time monitoring of free heap memory and heap fragmentation to prevent out-of-memory spikes.
+- **Neural Activity Waveform:** Real-time visual activity pulse generated during autonomous story synthesis and gaze math computation.
+- **2.84 TOPS Hardware Accelerator Meter:** Dynamically tracks emulated acceleration load and inference step progression.
+
+---
+
+### 2. Primary Display: Screen Modes & Story Narrator (2.8" Color TFT, 320×240)
+
+#### Page 1: Expressive AI Companion & Autonomous 6-Stage Weather Story Narrator
+
+<p align="center">
+  <img src="posters/assets/screen_companion_uv_advisory_eyes.jpg" width="48%" alt="AI Companion & UV Advisory (Stage 2)" />
+  <img src="posters/assets/screen_companion_story_stage4.jpg" width="48%" alt="Story Narrator Stage 4: Weekly Outlook" />
+</p>
+<p align="center">
+  <img src="posters/assets/screen_companion_briefing_end.jpg" width="55%" alt="Story Narrator Stage 5: Briefing Completion" />
+</p>
+
+- **Expressive Companion Avatar:**
+  - **Lissajous Gaze Engine:** Non-repetitive eye movement driven by parametric sinusoidal phase equations.
+  - **Equalizer Mouth:** Dynamic 7-bar audio-reactive mouth that talks during narrative playback and settles into a serene smile when idle.
+- **Autonomous Multi-Stage Storyteller:**
+  - Cycles automatically through 6 discrete contextual stages:
+    1. *Stage 0:* Today's Morning Synopsis & High/Low Overview
+    2. *Stage 1:* Thermal Comfort Index & Humidity Assessment
+    3. *Stage 2:* UV Index Alert & Protective Action Advisory
+    4. *Stage 3:* 4-Day Synoptic Forecast Breakdown
+    5. *Stage 4:* Long-Range Weekly Trend & Precipitation Outlook
+    6. *Stage 5:* Briefing Conclusion with explicit `"— END —"` marker.
+  - **Interactive Touch Reset:** Tapping the avatar face or narrative box immediately restarts the story briefing from Stage 0.
+
+#### Page 2: 4-Day Synoptic Atmospheric Telemetry
+
+<p align="center">
+  <img src="posters/assets/screen_forecast_analyzer_closeup.jpg" width="60%" alt="4-Day Synoptic Forecast Telemetry" />
+</p>
+
+- **Parametric In-Flash Vector Weather Glyphs:** Sun, cloud, rain, and thunderstorm glyphs drawn dynamically at runtime using mathematical trigonometry — zero SD card or static image dependencies.
+- **Dynamic Thermal Range Bars:** Color-gradient horizontal bars depicting daily Min/Max thermal spreads.
+- **Precipitation Probability & Wind Telemetry:** Real-time meteorological telemetry from Open-Meteo updated automatically via background HTTP client.
+
+---
+
+### 3. Physical Hardware Construction & Closeups
+
+<p align="center">
+  <img src="posters/assets/cyd_tft_screen_closeup.jpg" width="48%" alt="CYD 2.8-inch TFT Display Closeup" />
+  <img src="posters/assets/oled_physical_crop.jpg" width="48%" alt="SSD1306 OLED Wiring Detail" />
+</p>
+
+- **CYD 2.8" SPI TFT:** High-density ILI9341 display driven over hardware VSPI at 40 MHz for crisp, flicker-free differential UI updates.
+- **SSD1306 I²C OLED:** Compact 0.96" display wired cleanly to `GPIO 27` (SDA) and `GPIO 22` (SCL) with onboard 3.3V power rails.
 
 ---
 
