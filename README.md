@@ -100,6 +100,22 @@ const char* LOC_TIMEZONE    = "Asia%2FColombo";
 
 ---
 
+## Offline On-Device LLM Mode (`llm_companion/`)
+
+This repository also includes a standalone on-device, offline Large Language Model firmware for the ESP32 CYD based on Andrej Karpathy's `llama2.c`.
+
+- **Firmware Path:** [`llm_companion/cyd_companion.ino`](llm_companion/cyd_companion.ino)
+- **Model:** TinyStories 260K-parameter Llama-2 architecture (`model_data.h` / `stories260K.bin`) embedded directly into flash memory.
+- **Zero-Network Dependency:** Runs completely standalone without WiFi or cloud API keys.
+- **Interactive Story Prompts:** Touch quadrant buttons for:
+  - `[STORY]` — Classic fairy tale generation ("Once upon a time...")
+  - `[SPARK]` — Playful character adventure ("One day, Lily...")
+  - `[PET]` — Animal companion stories ("Tim and his dog...")
+  - `[RANDOM]` — Dynamic randomized story generation
+- **Terminal Display:** Real-time token streaming with automatic page pausing and completion badges.
+
+---
+
 ## Documentation Files
 - [`UI_LAYOUT_SPEC.md`](UI_LAYOUT_SPEC.md): Complete pixel-exact UI specification with design tokens, coordinates, and color palettes.
 - [`PROJECT_POSTER_SPEC.md`](PROJECT_POSTER_SPEC.md): Exhibition & project poster dossier with block diagrams, problem statements, and poster layout blueprints.

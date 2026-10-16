@@ -6,6 +6,7 @@ posters/output/
 # Arduino / ESP32 Build Outputs
 build/
 *.bin
+!llm_companion/*.bin
 *.elf
 *.hex
 *.map
